@@ -12,8 +12,7 @@ export function appAddLink(href:string) {
 
 export function reduceAppModel(state, action):AppModel {
   state = Object.assign({
-    links: [],
-    errorMessage: undefined
+    links: []
   }, state);
 
   switch (action.type) {

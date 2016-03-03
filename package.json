@@ -4,7 +4,10 @@
   "scripts": {
     "postinstall": "typings install",
     "package": "webpack",
-    "start": "webpack-dev-server --progress --d --content-base target/out/ --port=8080"
+    "start": "webpack-dev-server --progress --d --content-base target/out/ --port=8080",
+
+    "pretest": "webpack --d --config webpack.test.config.js",
+    "test": "jasmine-node --matchall --test-dir target/test/"
   },
   "devDependencies": {
     "less": "2.3.1",
@@ -15,6 +18,7 @@
     "ts-loader": "",
     "hson-loader": "1.0.0",
     "less-loader": "",
+    "null-loader": "",
     "style-loader": "",
     "css-loader": "",
     "html-webpack-plugin": "1.6.1",
@@ -31,7 +35,10 @@
     "babel-plugin-transform-runtime": "",
     "babel-polyfill": "",
 
-    "jasmine": ""
+    "jasmine": "",
+    "jasmine-node": "",
+
+    "glob": ""
   },
   "dependencies": {
     "babel-runtime": "",
