@@ -20,6 +20,9 @@ module.exports = {
   plugins: [
     new webpack.optimize.DedupePlugin(),
     new webpack.IgnorePlugin(/^(fs|path)$/),
+
+    // You may want to add this for production build only, because otherwise
+    // you won't get detailed messages on React exceptions.
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify('production')

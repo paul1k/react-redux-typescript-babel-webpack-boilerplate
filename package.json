@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "postinstall": "typings install",
-    "package": "webpack -p",
+    "package": "webpack",
     "start": "webpack-dev-server --progress --d --content-base target/out/ --port=8080"
   },
   "devDependencies": {
@@ -35,6 +35,8 @@
   },
   "dependencies": {
     "babel-runtime": "",
+
+    "lodash": "",
 
     "react": "0.14.6",
     "react-dom": "0.14.6",
