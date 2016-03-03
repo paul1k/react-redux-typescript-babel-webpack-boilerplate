@@ -1,29 +1,35 @@
 import * as React from 'react';
-import {linkClicked, LinkState} from './LinkState';
+import {fetchLinkContent, LinkModel} from './LinkModel';
 
 interface LinkProps {
   dispatch: Function;
-  state: LinkState;
+  model: LinkModel;
 }
 
 export class Link extends React.Component<LinkProps, {}> {
 
   onLinkClick = () => {
-    let {dispatch, state: {uid}} = this.props;
-    dispatch(linkClicked(uid));
+    let {dispatch, model: {uid, href}} = this.props;
+    dispatch(fetchLinkContent(uid, href));
   };
 
   render() {
-    let {state: {href, counter}} = this.props;
+    let {model: {href, content, errorMessage}} = this.props;
+    let contentBlock;
+    if (content) {
+      contentBlock = <div>Page content: <pre>{content}</pre></div>
+    }
+    if (errorMessage) {
+      contentBlock = <div>Error occurred: <pre>{errorMessage}</pre></div>;
+    }
     return (
       <span>
         <a className="link red"
-           href={href}
-           target="_blank"
+           href="javascript:"
            onClick={this.onLinkClick}>
-          {href}
+          Click to fetch content from {href}
         </a>
-        (Visit counter: {counter})
+        {contentBlock}
       </span>
     );
   }

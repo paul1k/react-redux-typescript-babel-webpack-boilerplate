@@ -1,10 +1,16 @@
+// Load polyfills first.
+//require('babel-polyfill');
+//require('whatwg-fetch');
+
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import * as _ from 'lodash';
 
 import {App} from './app/App';
 import {createStore, applyMiddleware, combineReducers} from 'redux';
-import {reduceAppState} from './app/AppState';
+import {default as thunk} from 'redux-thunk';
+import {reduceAppModel} from './app/AppModel';
+
 
 // Stylesheet is converted to index.css by ExtractTextPlugin defined in Webpack config.
 require('../less/index.less');
@@ -17,13 +23,13 @@ const DEFAULT_APP_STATE = {
   ]
 };
 
-let appStore = createStore(reduceAppState, DEFAULT_APP_STATE);
+let appStore = applyMiddleware(thunk)(createStore)(reduceAppModel, DEFAULT_APP_STATE);
 
 // Prevent application from being re-rendered too often with throttle.
 let renderApp = _.throttle(() => {
   ReactDOM.render(
     <App dispatch={appStore.dispatch}
-         state={appStore.getState()}/>,
+         model={appStore.getState()}/>,
     document.getElementById('app'));
 }, 50);
 

@@ -1,18 +1,19 @@
-import {reduceLinkState, LinkState} from './LinkState';
+import {reduceLinkState, LinkModel} from './LinkModel';
 
-export interface AppState {
-  links: LinkState[]
+export interface AppModel {
+  links: LinkModel[]
 }
 
-export const APP_ADD_LINK:string = 'AppStore.addLink';
+export const APP_ADD_LINK:string = 'AppModel.addLink';
 
 export function appAddLink(href:string) {
   return {type: APP_ADD_LINK, payload: {href}};
 }
 
-export function reduceAppState(state, action):AppState {
+export function reduceAppModel(state, action):AppModel {
   state = Object.assign({
-    links: []
+    links: [],
+    errorMessage: undefined
   }, state);
 
   switch (action.type) {

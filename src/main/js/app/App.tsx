@@ -1,42 +1,43 @@
 import * as React from 'react';
-import {AppState, appAddLink} from './AppState';
+import {AppModel, appAddLink} from './AppModel';
 import {Link} from './Link';
 
 interface AppProps {
   dispatch: Function;
-  state: AppState;
+  model: AppModel;
+  errorMessage?: string;
 }
 
 export class App extends React.Component<AppProps, any> {
   state = {
-    href: 'http://google.com'
+    userHref: 'http://www.google.com/'
   };
 
   onAddLinkClick = e => {
-    let {href} = this.state;
-    if (href) {
-      this.props.dispatch(appAddLink(href));
+    let {userHref} = this.state;
+    if (userHref) {
+      this.props.dispatch(appAddLink(userHref));
     }
   };
   
   onInputChange = e => {
-    this.setState({href: e.target.value})
+    this.setState({userHref: e.target.value})
   };
   
   render() {
-    let {dispatch, state: {links}} = this.props;
+    let {dispatch, model: {links}} = this.props;
     return (
       <div>
-        <ul>
+        <ul className="link-list">
           {links.map((link, i) =>
             <li key={i}>
               <Link dispatch={dispatch}
-                    state={link}/>
+                    model={link}/>
             </li>
           )}
         </ul>
         <input type="text"
-               value={this.state.href}
+               value={this.state.userHref}
                onChange={this.onInputChange}/>
         <button onClick={this.onAddLinkClick}>Add link</button>
       </div>
