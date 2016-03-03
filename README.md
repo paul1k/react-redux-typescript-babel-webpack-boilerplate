@@ -1,6 +1,6 @@
-# [React][1] + [Redux][2] + [TypeScript][3] + [Babel][4] + [Webpack][5] Seed Project
+# [React][1] + [Redux][2] + [TypeScript][3] + [Babel][4] + [Webpack][5] Boilerplate Project
 
-Quick start for React + Redux + TypeScript + Babel + Webpack stack. Also uses LESS for stylesheets and [Jasmine][10] for unit tests.
+Boilerplate project for setting up React + Redux + TypeScript + Babel + Webpack stack. Also uses LESS for stylesheets and [Jasmine][10] for unit tests.
 
 Have a look at [React Slingshot][12] for analogous stack without TypeScript.
 
