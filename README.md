@@ -25,7 +25,7 @@ Create async actions that retrieve server data with `async / await` and [`fetch`
 ```javascript
 export function fetchContent(url) {
   return async function(dispatch) {
-    let content = await fetch(url).then(res => re.json());
+    let content = await fetch(url).then(res => res.json());
     
     // Dispatch would occur only after successful `fetch` of JSON data.
     dispatch({type: LINK_CONTENT, content});
