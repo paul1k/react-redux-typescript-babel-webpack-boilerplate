@@ -1,4 +1,4 @@
-# [React][1] + [Redux][2] + [TypeScript][3] + [Babel][4] + [Webpack][5] Boilerplate Project
+# [React][1] + [Redux][2] + [TypeScript][3] + [Babel][4] + [Webpack][5] Boilerplate Project [![Build Status](https://travis-ci.org/smikhalevski/react-redux-typescript-babel-webpack-boilerplate.svg)](https://travis-ci.org/smikhalevski/react-redux-typescript-babel-webpack-boilerplate)
 
 Boilerplate project for setting up React + Redux + TypeScript + Babel + Webpack stack. Uses LESS for stylesheets and [Jasmine][10] for unit tests.
 
