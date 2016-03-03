@@ -1,0 +1,44 @@
+{
+  "name": "react-redux-typescript-babel-webpack-seed",
+  "version": "0.0.1",
+  "scripts": {
+    "postinstall": "typings install",
+    "package": "webpack -p",
+    "start": "webpack-dev-server --progress --d --content-base target/out/ --port=8080"
+  },
+  "devDependencies": {
+    "less": "2.3.1",
+
+    "webpack": "1.12.9",
+    "webpack-dev-server": "1.12.0",
+    "babel-loader": "6.2.0",
+    "ts-loader": "",
+    "hson-loader": "1.0.0",
+    "less-loader": "",
+    "style-loader": "",
+    "css-loader": "",
+    "html-webpack-plugin": "1.6.1",
+    "extract-text-webpack-plugin": "0.8.2",
+    "single-module-instance-webpack-plugin": "0.0.3",
+    "hanson": "",
+
+    "typescript": "",
+    "typings": "",
+
+    "babel-core": "6.3.26",
+    "babel-preset-es2015": "",
+    "babel-preset-stage-0": "",
+    "babel-plugin-transform-runtime": "",
+    "babel-polyfill": "",
+
+    "jasmine": ""
+  },
+  "dependencies": {
+    "babel-runtime": "",
+
+    "react": "0.14.6",
+    "react-dom": "0.14.6",
+
+    "redux": ""
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "react-redux-typescript-babel-webpack-seed",
+  "ambientDependencies": {
+    "jasmine": "github:DefinitelyTyped/DefinitelyTyped/jasmine/jasmine.d.ts",
+    "react": "github:DefinitelyTyped/DefinitelyTyped/react/react.d.ts",
+    "redux": "github:DefinitelyTyped/DefinitelyTyped/redux/redux.d.ts"
+  }
+}
