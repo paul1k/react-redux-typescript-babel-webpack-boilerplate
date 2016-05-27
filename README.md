@@ -10,7 +10,7 @@ First of all TypeScript and Babel were created for different purposes. Babel tra
 
 ### How to run
 
-Use `npm install` to install required modules and requires typings.
+Use `npm install` to install required modules and requires typings (`typings install`).
 
 Use `npm start` to launch dev server on [localhost:8080](http://localhost:8080/webpack-dev-server/index.html).
 
