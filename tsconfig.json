@@ -6,7 +6,7 @@
     "pretty": true
   },
   "files": [
-    "./typings/main.d.ts",
+    "./typings/index.d.ts",
     "./src/main/typings/index.d.ts"
   ]
 }
