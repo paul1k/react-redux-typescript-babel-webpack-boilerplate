@@ -29,7 +29,7 @@ module.exports = {
       }
     }),
     new HtmlWebpackPlugin({
-      template: './src/main/index.html',
+      template: require('html-webpack-template'),
       minify: {collapseWhitespace: true}
     }),
     new ExtractTextPlugin('[name].css'),
